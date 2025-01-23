@@ -13,21 +13,24 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ClienteRequest {
 
-   private String nome;
+   private String nomeCompleto;
 
    private String email;
 
-   private String cpf;
-
+   private String password;
+  
    private String foneCelular;
+
+   private String cpf;
    
    public Cliente build() {
 
        return Cliente.builder()
-           .nome(nome)
+           .nomeCompleto(nomeCompleto)
            .email(email)
-           .cpf(cpf)
+           .password(password)
            .foneCelular(foneCelular)
+           .cpf(cpf)
            .build();
    }
 

@@ -24,16 +24,19 @@ import lombok.Builder;
 public class Cliente extends EntidadeAuditavel  {
 
    @Column
-   private String nome;
+   private String nomeCompleto;
 
    @Column
    private String email;
 
    @Column
-   private String cpf;
-
+   private String password;
+ 
    @Column
    private String foneCelular;
+
+   @Column
+   private String cpf;
 
 }
 
