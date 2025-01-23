@@ -1,9 +1,6 @@
 
 package br.com.ifpe.startinfo.api.cliente;
 
-import java.time.LocalDate;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
 import br.com.ifpe.startinfo.model.cliente.Cliente;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,23 +15,19 @@ public class ClienteRequest {
 
    private String nome;
 
-   @JsonFormat(pattern = "dd/MM/yyyy")
-   private LocalDate dataNascimento;
+   private String email;
 
    private String cpf;
 
    private String foneCelular;
-
-   private String foneFixo;
-
+   
    public Cliente build() {
 
        return Cliente.builder()
            .nome(nome)
-           .dataNascimento(dataNascimento)
+           .email(email)
            .cpf(cpf)
            .foneCelular(foneCelular)
-           .foneFixo(foneFixo)
            .build();
    }
 

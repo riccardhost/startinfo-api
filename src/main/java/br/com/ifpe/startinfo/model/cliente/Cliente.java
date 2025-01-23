@@ -1,8 +1,6 @@
 
 package br.com.ifpe.startinfo.model.cliente;
 
-import java.time.LocalDate;
-
 import org.hibernate.annotations.SQLRestriction;
 import br.com.ifpe.startinfo.util.entity.EntidadeAuditavel;
 import jakarta.persistence.Column;
@@ -29,16 +27,13 @@ public class Cliente extends EntidadeAuditavel  {
    private String nome;
 
    @Column
-   private LocalDate dataNascimento;
+   private String email;
 
    @Column
    private String cpf;
 
    @Column
    private String foneCelular;
-
-   @Column
-   private String foneFixo;
 
 }
 
